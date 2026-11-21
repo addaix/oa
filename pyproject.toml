@@ -42,10 +42,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://thorwhalen.github.io/oa/"
-Repository = "https://github.com/thorwhalen/oa"
-Issues = "https://github.com/thorwhalen/oa/issues"
-Changelog = "https://github.com/thorwhalen/oa/blob/main/CHANGELOG.md"
+Homepage = "https://addaix.github.io/oa/"
+Repository = "https://github.com/addaix/oa"
+Issues = "https://github.com/addaix/oa/issues"
+Changelog = "https://github.com/addaix/oa/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 testing = ["playwright"]
