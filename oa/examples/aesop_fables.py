@@ -24,7 +24,7 @@ def rm_extension(ext):
     """Make a key transformer that removes the given extension from keys"""
     if not ext.startswith("."):
         ext = "." + ext
-    return wrap_kvs(id_of_key=lambda x: x + ext, key_of_id=lambda x: x[: -len(ext)])
+    return wrap_kvs(key_encoder=lambda x: x + ext, key_decoder=lambda x: x[: -len(ext)])
 
 
 Texts = rm_extension("txt")(TextFiles)
@@ -236,14 +236,14 @@ def mk_pages_store(*, rhyming_stories, image_urls, ipython_display=False):
 
     s = wrap_kvs(
         fanout_store,
-        obj_of_data=lambda x: ii.aggregate_story_and_image(
+        value_decoder=lambda x: ii.aggregate_story_and_image(
             image_url=x["image_urls"], story_text=x["rhyming_stories"]
         ),
     )
     if ipython_display:
         from IPython.display import HTML
 
-        s = wrap_kvs(s, obj_of_data=HTML)
+        s = wrap_kvs(s, value_decoder=HTML)
     return s
 
 
