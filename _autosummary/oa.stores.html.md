@@ -216,8 +216,8 @@ Filter objects by date.
 
 * **Parameters:**
   * **objs** – The objects to filter (must have a)
-  * **min_date** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The minimum date (inclusive)
-  * **max_date** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The maximum date (inclusive)
+  * **min_date** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The minimum date (inclusive)
+  * **max_date** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The maximum date (inclusive)
   * **date_attr** – The attribute to get the date from
   * **stop_on_first_out_of_range** – If True, stop iteration on first out-of-range date
 
@@ -264,7 +264,7 @@ The following will resolve a string representation of an integer as an id.
 Extract the embeddings from a HttpxBinaryResponseContent object
 
 * **Return type:**
-  [*dict*](https://docs.python.org/3/builtins/stdtypes.html#dict)
+  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
 
 ### oa.stores.get_json_or_jsonl_data(response)
 
@@ -283,10 +283,10 @@ Is a list (or iterable) of dicts (or Mappings) the schema of an openai API ‘ta
 This function extracts the object (value) from a {object: V, index: i, V} dict
 which is the format you’ll find in the [‘response’][‘body’][‘data’] of a response.
 
-* **Return type:**
-  [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`DataObjectValue`)
-
 ```pycon
 >>> object_of_data({'object': 'embeddings', 'index': 3, 'embeddings': [1, 2, 3]})
 [1, 2, 3]
 ```
+
+* **Return type:**
+  `DataObjectValue`

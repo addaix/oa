@@ -19,7 +19,7 @@ Convert text to speech using OpenAI’s TTS API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – TTS model to use
   * **voice** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Voice to use (alloy, echo, fable, onyx, nova, shimmer)
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Audio format (‘mp3’, ‘opus’, ‘aac’, ‘flac’, ‘wav’, ‘pcm’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Audio content as bytes
@@ -36,7 +36,7 @@ Transcribe an audio or video file using OpenAI’s Whisper API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Transcription model to use
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Format for the response (‘json’, ‘text’, ‘srt’, ‘verbose_json’)
   * **language** ([`Optional`](https://docs.python.org/3/library/typing.html#typing.Optional)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]) – Optional ISO-639-1 language code (e.g., ‘en’, ‘fr’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Dict with ‘text’, ‘segments’, ‘language’, and ‘raw_response’
@@ -71,7 +71,7 @@ Convert text to speech using OpenAI’s TTS API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – TTS model to use
   * **voice** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Voice to use (alloy, echo, fable, onyx, nova, shimmer)
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Audio format (‘mp3’, ‘opus’, ‘aac’, ‘flac’, ‘wav’, ‘pcm’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Audio content as bytes

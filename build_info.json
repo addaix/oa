@@ -1,41 +1,41 @@
 {
   "schema_version": 1,
-  "built_at": "2026-10-14T00:42:53Z",
+  "built_at": "2026-11-21T19:22:49Z",
   "package": {
     "name": "oa",
-    "version": "0.1.60",
+    "version": "0.1.61",
     "display_name": "oa",
     "source": "pyproject.toml"
   },
   "git": {
     "available": true,
-    "commit": "617693d165626d37fa9fba8df44e332d2758d202",
-    "short_commit": "617693d",
+    "commit": "019e35af20691ba37431ae1a67cbc868b80595ac",
+    "short_commit": "019e35a",
     "branch": "main",
     "tags": [
-      "0.1.60"
+      "0.1.61"
     ],
     "dirty": false,
-    "remote_url": "https://github.com/thorwhalen/oa",
-    "commit_url": "https://github.com/thorwhalen/oa/commit/617693d165626d37fa9fba8df44e332d2758d202",
+    "remote_url": "https://github.com/addaix/oa",
+    "commit_url": "https://github.com/addaix/oa/commit/019e35af20691ba37431ae1a67cbc868b80595ac",
     "error": null
   },
   "ci": {
     "provider": "github",
-    "repository": "thorwhalen/oa",
-    "sha": "fe917988b3611965f7158f3eb4540fa9ac394076",
+    "repository": "addaix/oa",
+    "sha": "2b7110d8f6f504e8e8d2fa70a5b0486d3a88a3d8",
     "sha_in_history": true,
     "ref": "refs/heads/main",
     "ref_name": "main",
-    "run_id": "38491424380",
-    "run_url": "https://github.com/thorwhalen/oa/actions/runs/38491424380",
+    "run_id": "44940304206",
+    "run_url": "https://github.com/addaix/oa/actions/runs/44940304206",
     "server_url": "https://github.com"
   },
   "tools": {
-    "epythet": "0.2.17",
-    "sphinx": "9.1.0",
+    "epythet": "0.2.23",
+    "sphinx": "9.1.1",
     "docutils": "0.22.4",
-    "python": "3.12.15"
+    "python": "3.12.16"
   },
   "config": {
     "theme": "auto",
@@ -62,11 +62,11 @@
   },
   "pypi": {
     "checked": true,
-    "latest": "0.1.60",
+    "latest": "0.1.61",
     "relation": "same",
     "error": null
   },
-  "reproduce": "git clone https://github.com/thorwhalen/oa && cd oa\ngit checkout 617693d165626d37fa9fba8df44e332d2758d202\npip install \"epythet==0.2.17\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "reproduce": "git clone https://github.com/addaix/oa && cd oa\ngit checkout 019e35af20691ba37431ae1a67cbc868b80595ac\npip install \"epythet==0.2.23\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
   "warnings": [],
   "alignment": {
     "aligned": true,

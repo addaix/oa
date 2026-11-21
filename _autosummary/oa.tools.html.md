@@ -59,7 +59,7 @@ as a convenient tool to do response statistics and validation (via n>1).
 
 * **Parameters:**
   * **prompt** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – The question or prompt to ask the LLM
-  * **valid_answers** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`int`](https://docs.python.org/3/builtins/functions.html#int)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`float`](https://docs.python.org/3/builtins/functions.html#float)], [`type`](https://docs.python.org/3/builtins/functions.html#type), [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`float`](https://docs.python.org/3/builtins/functions.html#float), [`float`](https://docs.python.org/3/builtins/functions.html#float)]]) – 
+  * **valid_answers** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`int`](https://docs.python.org/3/builtins/functions.html#int)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`float`](https://docs.python.org/3/builtins/functions.html#float)], [`type`](https://docs.python.org/3/builtins/functions.html#type), [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`float`](https://docs.python.org/3/builtins/functions.html#float), [`float`](https://docs.python.org/3/builtins/functions.html#float)]]) – 
 
     Can be:
     - list[str]: List of valid string options
@@ -120,9 +120,6 @@ True
 
 Ensure that the json type is a string that is a valid json type
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> ensure_json_type('string')
 'string'
@@ -133,6 +130,9 @@ Traceback (most recent call last):
 ...
 ValueError: Cannot convert ...
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
 
 ### oa.tools.infer_schema_from_verbal_description(verbal_description, \*, prompt_func=<function chat>, prompt_func_kwargs=None, model='gpt-4o-mini')
 
@@ -160,13 +160,13 @@ defaults preserve the original behavior (oa’s `chat` on `gpt-4o-mini`).
 
 Make a generic json schema for a given json type.
 
-* **Return type:**
-  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
-
 ```pycon
 >>> make_generic_json_schema('string')
 {'name': 'generic_string_schema', 'schema': {'properties': {'result': {'type': 'string'}}, 'required': ['result']}}
 ```
+
+* **Return type:**
+  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
 
 ### oa.tools.pattern_based_map(func, string, pattern, apply_to='unmatched')
 

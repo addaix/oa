@@ -169,7 +169,7 @@ from submitting batches to the API, monitoring their status, and
 aggregating the results.
 
 * **Parameters:**
-  * **segments** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed, either as a list or a dictionary
+  * **segments** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed, either as a list or a dictionary
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – OpenAI embedding model to use
   * **batch_size** ([`int`](https://docs.python.org/3/builtins/functions.html#int)) – Maximum number of segments per batch
   * **poll_interval** ([`float`](https://docs.python.org/3/builtins/functions.html#float)) – Seconds between status checks
@@ -193,7 +193,7 @@ aggregating the results.
 Compute embeddings and return results as a pandas DataFrame.
 
 * **Parameters:**
-  * **segments** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed
+  * **segments** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – OpenAI embedding model to use
   * **\*\*kwargs** – Additional arguments passed to compute_embeddings
 * **Return type:**

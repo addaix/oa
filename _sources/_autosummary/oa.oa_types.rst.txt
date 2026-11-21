@@ -25,5 +25,6 @@ oa.oa\_types
       Response
       ResponseBody
       Response[Embedding]
+      RootModel[list[TypeVar]]
       Usage
    

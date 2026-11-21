@@ -1,4 +1,4 @@
-> built 2026-10-14 00:42 UTC from 617693d (main) · oa 0.1.60. Details: build_info.json
+> built 2026-11-21 19:22 UTC from 019e35a (main) · oa 0.1.61. Details: build_info.json
 
 # index.html.md
 
@@ -29,8 +29,8 @@ Below, you’ll see how
 
 See notebooks:
 
-* [oa - An OpenAI facade.ipynb](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20An%20OpenAI%20facade.ipynb)
-* [oa - Making an Aesop fables children’s book oa.ipynb](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20Making%20an%20Aesop%20fables%20children's%20book%20oa.ipynb)
+* [oa - An OpenAI facade.ipynb](https://github.com/addaix/oa/blob/main/misc/oa%20-%20An%20OpenAI%20facade.ipynb)
+* [oa - Making an Aesop fables children’s book oa.ipynb](https://github.com/addaix/oa/blob/main/misc/oa%20-%20Making%20an%20Aesop%20fables%20children's%20book%20oa.ipynb)
 
 Below are a few snippets from there.
 
@@ -396,7 +396,7 @@ from IPython.display import Image
 Image(url=url)
 ```
 
-![image](https://github.com/thorwhalen/oa/assets/1906276/6e7b2ac4-648c-4ec0-81bf-078208f4ac39)
+![image](https://github.com/addaix/oa/assets/1906276/6e7b2ac4-648c-4ec0-81bf-078208f4ac39)
 
 ## Raw form - When you need to be closer to the metal
 
@@ -537,7 +537,7 @@ Sure, here are 5 top prompt engineering tricks to write good prompts for chatGPT
 The `ChatDacc` class gives you access of the main functionalities of the `chats.py` module.
 It provides tools for analyzing and extracting data from shared ChatGPT conversations.
 Here’s an overview of its main features, for more details, see
-[this demo notebook](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20chats%20acquisition%20and%20parsing.ipynb)
+[this demo notebook](https://github.com/addaix/oa/blob/main/misc/oa%20-%20chats%20acquisition%20and%20parsing.ipynb)
 
 ## Initialize with a URL
 
@@ -642,7 +642,7 @@ Convert text to speech using OpenAI’s TTS API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – TTS model to use
   * **voice** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Voice to use (alloy, echo, fable, onyx, nova, shimmer)
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Audio format (‘mp3’, ‘opus’, ‘aac’, ‘flac’, ‘wav’, ‘pcm’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Audio content as bytes
@@ -659,7 +659,7 @@ Transcribe an audio or video file using OpenAI’s Whisper API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Transcription model to use
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Format for the response (‘json’, ‘text’, ‘srt’, ‘verbose_json’)
   * **language** ([`Optional`](https://docs.python.org/3/library/typing.html#typing.Optional)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]) – Optional ISO-639-1 language code (e.g., ‘en’, ‘fr’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Dict with ‘text’, ‘segments’, ‘language’, and ‘raw_response’
@@ -694,7 +694,7 @@ Convert text to speech using OpenAI’s TTS API.
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – TTS model to use
   * **voice** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Voice to use (alloy, echo, fable, onyx, nova, shimmer)
   * **response_format** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – Audio format (‘mp3’, ‘opus’, ‘aac’, ‘flac’, ‘wav’, ‘pcm’)
-  * **client** (`Union`[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
+  * **client** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[`OpenAI`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – OpenAI client instance, API key string, config dict, or None
   * **kwargs** – Additional parameters for the API
 * **Returns:**
   Audio content as bytes
@@ -715,7 +715,7 @@ Base oa functionality
 |--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | `complete`(prompt[, model, best_of, echo, ...])                                                  |                                                                                 |
 | [`compute_price`](_autosummary/oa.base.html.md#oa.base.compute_price)(model[, num_input_tokens, ...])   | Compute the price of a model given the number of input and output tokens        |
-| `dalle`(prompt[, n, size, background, model, ...])                                               |                                                                                 |
+| `dalle`(prompt[, n, size, background, ...])                                                      |                                                                                 |
 | [`embeddings`](_autosummary/oa.base.html.md#oa.base.embeddings)([texts, batch_size, egress, ...])    | Get embeddings for a text or texts.                                             |
 | [`list_engine_ids`](_autosummary/oa.base.html.md#oa.base.list_engine_ids)([pattern])                      | List the available engine IDs.                                                  |
 | [`model_information`](_autosummary/oa.base.html.md#oa.base.model_information)(model, information)           | Get information about a model                                                   |
@@ -732,7 +732,7 @@ Compute the price of a model given the number of input and output tokens
 Get embeddings for a text or texts.
 
 * **Parameters:**
-  * **texts** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – A string, an iterable of strings, or a dictionary of strings
+  * **texts** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – A string, an iterable of strings, or a dictionary of strings
   * **egress** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str) | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – A function that takes the embeddings and returns the desired output.
     If None, the output will be a list of embeddings. If False, no output will be
     returned, so the batch_callback had better be set to accumulate the results.
@@ -848,7 +848,7 @@ Text is valid if
 - the number of tokens in the text is less than or equal to the max_tokens
 
 * **Parameters:**
-  * **texts** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – a string or an iterable of strings
+  * **texts** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – a string or an iterable of strings
   * **token_count** – Specification of the token count of the text or texts
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – The model to use for token count
   * **max_tokens** – The maximum number of tokens allowed by the model
@@ -1056,7 +1056,7 @@ from submitting batches to the API, monitoring their status, and
 aggregating the results.
 
 * **Parameters:**
-  * **segments** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed, either as a list or a dictionary
+  * **segments** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed, either as a list or a dictionary
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – OpenAI embedding model to use
   * **batch_size** ([`int`](https://docs.python.org/3/builtins/functions.html#int)) – Maximum number of segments per batch
   * **poll_interval** ([`float`](https://docs.python.org/3/builtins/functions.html#float)) – Seconds between status checks
@@ -1080,7 +1080,7 @@ aggregating the results.
 Compute embeddings and return results as a pandas DataFrame.
 
 * **Parameters:**
-  * **segments** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed
+  * **segments** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – Text segments to embed
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – OpenAI embedding model to use
   * **\*\*kwargs** – Additional arguments passed to compute_embeddings
 * **Return type:**
@@ -1162,7 +1162,7 @@ OpenAI API batch endpoint. The endpoint will then generate embeddings for the
 provided texts.
 
 * **Parameters:**
-  * **texts** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – The text or list of texts to generate embeddings for.
+  * **texts** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – The text or list of texts to generate embeddings for.
   * **custom_id** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str) | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – A custom identifier for the batch task. Defaults to None.
   * **validate** ([`bool`](https://docs.python.org/3/builtins/functions.html#bool) | [`Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable) | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – Whether to validate the texts. Defaults to True.
   * **valid_text_getter** (*Optional* *[**Callable* *]* *,* *optional*) – Function to retrieve valid texts. Defaults to \_raise_if_any_invalid.
@@ -1531,29 +1531,22 @@ Types for oa
 
 ### Classes
 
-| [`BatchRequest`](_autosummary/oa.oa_types.html.md#oa.oa_types.BatchRequest)(\*\*data)        |                                                                                |
-|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [`BatchRequestBody`](_autosummary/oa.oa_types.html.md#oa.oa_types.BatchRequestBody)(\*\*data)    |                                                                                |
-| [`EmbeddingResponse`](_autosummary/oa.oa_types.html.md#oa.oa_types.EmbeddingResponse)(\*\*data)   |                                                                                |
-| [`InputDataJsonL`](_autosummary/oa.oa_types.html.md#oa.oa_types.InputDataJsonL)                |                                                                                |
-| [`InputText`](_autosummary/oa.oa_types.html.md#oa.oa_types.InputText)(\*\*data)           | Used to specify the input data in some OpenAI API endpounts.                   |
-| [`JsonL`](_autosummary/oa.oa_types.html.md#id0)([root])                 | A generic class for JSONL (JSON Lines) files, which are lists of dictionaries. |
-| `JsonL[InputText]`([root])                                                     | A generic class for JSONL (JSON Lines) files, which are lists of dictionaries. |
-| [`RequestResponse`](_autosummary/oa.oa_types.html.md#oa.oa_types.RequestResponse)(\*\*data)     |                                                                                |
-| [`Response`](_autosummary/oa.oa_types.html.md#id2)(\*\*data)            |                                                                                |
-| [`ResponseBody`](_autosummary/oa.oa_types.html.md#oa.oa_types.ResponseBody)(\*\*data)        |                                                                                |
-| [`Response[Embedding]`](_autosummary/oa.oa_types.html.md#oa.oa_types.EmbeddingResponse)(\*\*data) |                                                                                |
-| [`Usage`](_autosummary/oa.oa_types.html.md#oa.oa_types.Usage)(\*\*data)               |                                                                                |
+| [`BatchRequest`](_autosummary/oa.oa_types.html.md#oa.oa_types.BatchRequest)(\*, custom_id, method, url, body)     |                                                                                |
+|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| [`BatchRequestBody`](_autosummary/oa.oa_types.html.md#oa.oa_types.BatchRequestBody)(\*, input, model)                 |                                                                                |
+| [`EmbeddingResponse`](_autosummary/oa.oa_types.html.md#oa.oa_types.EmbeddingResponse)(\*, id, custom_id, ...)          |                                                                                |
+| [`InputDataJsonL`](_autosummary/oa.oa_types.html.md#oa.oa_types.InputDataJsonL)                                     |                                                                                |
+| [`InputText`](_autosummary/oa.oa_types.html.md#oa.oa_types.InputText)(\*, input)                               | Used to specify the input data in some OpenAI API endpounts.                   |
+| [`JsonL`](_autosummary/oa.oa_types.html.md#id0)([root])                                      | A generic class for JSONL (JSON Lines) files, which are lists of dictionaries. |
+| `JsonL[InputText]`([root])                                                                          | A generic class for JSONL (JSON Lines) files, which are lists of dictionaries. |
+| [`RequestResponse`](_autosummary/oa.oa_types.html.md#oa.oa_types.RequestResponse)(\*, status_code, request_id, body) |                                                                                |
+| [`Response`](_autosummary/oa.oa_types.html.md#id2)(\*, id, custom_id, response, error)       |                                                                                |
+| [`ResponseBody`](_autosummary/oa.oa_types.html.md#oa.oa_types.ResponseBody)(\*, object, data, model, usage)       |                                                                                |
+| [`Response[Embedding]`](_autosummary/oa.oa_types.html.md#oa.oa_types.EmbeddingResponse)(\*, id, custom_id, ...)        |                                                                                |
+| `RootModel[list[TypeVar]]`([root])                                                                  | !!! abstract "Usage Documentation"                                             |
+| [`Usage`](_autosummary/oa.oa_types.html.md#oa.oa_types.Usage)(\*, prompt_tokens, total_tokens)             |                                                                                |
 
-### *class* oa.oa_types.BatchRequest(\*\*data)
-
-Bases: `BaseModel`
-
-#### model_config *: [ClassVar](https://docs.python.org/3/library/typing.html#typing.ClassVar)[ConfigDict]* *= {}*
-
-Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
-
-### *class* oa.oa_types.BatchRequestBody(\*\*data)
+### *class* oa.oa_types.BatchRequest(, custom_id, method, url, body)
 
 Bases: `BaseModel`
 
@@ -1561,7 +1554,15 @@ Bases: `BaseModel`
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.EmbeddingResponse(\*\*data)
+### *class* oa.oa_types.BatchRequestBody(, input, model)
+
+Bases: `BaseModel`
+
+#### model_config *: [ClassVar](https://docs.python.org/3/library/typing.html#typing.ClassVar)[ConfigDict]* *= {}*
+
+Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
+
+### *class* oa.oa_types.EmbeddingResponse(, id, custom_id, response, error)
 
 Bases: [`Response`](_autosummary/oa.oa_types.html.md#id2)
 
@@ -1573,7 +1574,7 @@ Configuration for the model, should be a dictionary conforming to [`ConfigDict`]
 
 alias of `JsonL[InputText]`
 
-### *class* oa.oa_types.InputText(\*\*data)
+### *class* oa.oa_types.InputText(, input)
 
 Bases: `BaseModel`
 
@@ -1583,7 +1584,7 @@ Used to specify the input data in some OpenAI API endpounts.
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.JsonL(root=PydanticUndefined, \*\*data)
+### *class* oa.oa_types.JsonL(root=PydanticUndefined)
 
 Bases: `RootModel[list[TypeVar]]`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`T`]
 
@@ -1593,7 +1594,7 @@ A generic class for JSONL (JSON Lines) files, which are lists of dictionaries.
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.JsonL(root=PydanticUndefined, \*\*data)
+### *class* oa.oa_types.JsonL(root=PydanticUndefined)
 
 Bases: `RootModel[list[TypeVar]]`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`T`]
 
@@ -1603,7 +1604,7 @@ A generic class for JSONL (JSON Lines) files, which are lists of dictionaries.
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.RequestResponse(\*\*data)
+### *class* oa.oa_types.RequestResponse(, status_code, request_id, body)
 
 Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`DatumT`]
 
@@ -1611,7 +1612,7 @@ Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#ty
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.Response(\*\*data)
+### *class* oa.oa_types.Response(, id, custom_id, response, error)
 
 Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`DatumT`]
 
@@ -1619,7 +1620,7 @@ Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#ty
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.Response(\*\*data)
+### *class* oa.oa_types.Response(, id, custom_id, response, error)
 
 Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`DatumT`]
 
@@ -1627,7 +1628,7 @@ Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#ty
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.ResponseBody(\*\*data)
+### *class* oa.oa_types.ResponseBody(, object, data, model, usage)
 
 Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`DatumT`]
 
@@ -1635,7 +1636,7 @@ Bases: `BaseModel`, [`Generic`](https://docs.python.org/3/library/typing.html#ty
 
 Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict].
 
-### *class* oa.oa_types.Usage(\*\*data)
+### *class* oa.oa_types.Usage(, prompt_tokens, total_tokens)
 
 Bases: `BaseModel`
 
@@ -1746,15 +1747,15 @@ Useful when, for example, you want to make a table containing both keys and valu
 
 Convert prompt to a normalized valid file/folder name
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> normalized_file_name("This is a prompt")
 'this is a prompt'
 >>> normalized_file_name("This is: a PROMPT!  (with punctuation)")
 'this is a prompt with punctuation'
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
 
 ### oa.openai_specs.properties_to_annotation(name, props)
 
@@ -1764,7 +1765,7 @@ Get annotations from a schema
 
 Get all but kind fields of a Parameter object
 
-### oa.openai_specs.schema_to_docs(name, schema, prefix='', line_prefix='\\\\t')
+### oa.openai_specs.schema_to_docs(name, schema, prefix='', line_prefix='\\t')
 
 Get the docs for a schema
 
@@ -2025,8 +2026,8 @@ Filter objects by date.
 
 * **Parameters:**
   * **objs** – The objects to filter (must have a)
-  * **min_date** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The minimum date (inclusive)
-  * **max_date** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The maximum date (inclusive)
+  * **min_date** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The minimum date (inclusive)
+  * **max_date** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`int`](https://docs.python.org/3/builtins/functions.html#int), [`None`](https://docs.python.org/3/builtins/constants.html#None)]) – The maximum date (inclusive)
   * **date_attr** – The attribute to get the date from
   * **stop_on_first_out_of_range** – If True, stop iteration on first out-of-range date
 
@@ -2073,7 +2074,7 @@ The following will resolve a string representation of an integer as an id.
 Extract the embeddings from a HttpxBinaryResponseContent object
 
 * **Return type:**
-  [*dict*](https://docs.python.org/3/builtins/stdtypes.html#dict)
+  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
 
 ### oa.stores.get_json_or_jsonl_data(response)
 
@@ -2092,13 +2093,13 @@ Is a list (or iterable) of dicts (or Mappings) the schema of an openai API ‘ta
 This function extracts the object (value) from a {object: V, index: i, V} dict
 which is the format you’ll find in the [‘response’][‘body’][‘data’] of a response.
 
-* **Return type:**
-  [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`DataObjectValue`)
-
 ```pycon
 >>> object_of_data({'object': 'embeddings', 'index': 3, 'embeddings': [1, 2, 3]})
 [1, 2, 3]
 ```
+
+* **Return type:**
+  `DataObjectValue`
 
 
 # _autosummary/oa.tools.html.md
@@ -2164,7 +2165,7 @@ as a convenient tool to do response statistics and validation (via n>1).
 
 * **Parameters:**
   * **prompt** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – The question or prompt to ask the LLM
-  * **valid_answers** (`Union`[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`int`](https://docs.python.org/3/builtins/functions.html#int)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`float`](https://docs.python.org/3/builtins/functions.html#float)], [`type`](https://docs.python.org/3/builtins/functions.html#type), [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`float`](https://docs.python.org/3/builtins/functions.html#float), [`float`](https://docs.python.org/3/builtins/functions.html#float)]]) – 
+  * **valid_answers** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`int`](https://docs.python.org/3/builtins/functions.html#int)], [`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`float`](https://docs.python.org/3/builtins/functions.html#float)], [`type`](https://docs.python.org/3/builtins/functions.html#type), [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`float`](https://docs.python.org/3/builtins/functions.html#float), [`float`](https://docs.python.org/3/builtins/functions.html#float)]]) – 
 
     Can be:
     - list[str]: List of valid string options
@@ -2225,9 +2226,6 @@ True
 
 Ensure that the json type is a string that is a valid json type
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> ensure_json_type('string')
 'string'
@@ -2238,6 +2236,9 @@ Traceback (most recent call last):
 ...
 ValueError: Cannot convert ...
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
 
 ### oa.tools.infer_schema_from_verbal_description(verbal_description, \*, prompt_func=<function chat>, prompt_func_kwargs=None, model='gpt-4o-mini')
 
@@ -2265,13 +2266,13 @@ defaults preserve the original behavior (oa’s `chat` on `gpt-4o-mini`).
 
 Make a generic json schema for a given json type.
 
-* **Return type:**
-  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
-
 ```pycon
 >>> make_generic_json_schema('string')
 {'name': 'generic_string_schema', 'schema': {'properties': {'result': {'type': 'string'}}, 'required': ['result']}}
 ```
+
+* **Return type:**
+  [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)
 
 ### oa.tools.pattern_based_map(func, string, pattern, apply_to='unmatched')
 
@@ -2404,7 +2405,7 @@ Bases: `ConfigNotFound`
 
 No OpenAI API key is configured, and there is no one to ask for it.
 
-### *class* oa.util.ProcessingManager(pending_items, processing_function, handle_status_function, wait_time_function, status_check_interval=5.0, max_cycles=None, completed_items=<factory>, cycles=0)
+### *class* oa.util.ProcessingManager(pending_items, processing_function, handle_status_function, wait_time_function, status_check_interval=5.0, max_cycles=None, completed_items=dict(), cycles=0)
 
 Bases: [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`KT`, `VT`, `Result`]
 
@@ -2483,11 +2484,11 @@ Thought note that you always can control the type of the chunks with the
 `chunk_type` argument.
 
 * **Parameters:**
-  * **iterable** ([`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]) – The iterable or mapping to divide.
+  * **iterable** ([`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[`T`] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, `VT`]) – The iterable or mapping to divide.
   * **chk_size** ([`int`](https://docs.python.org/3/builtins/functions.html#int)) – The size of each chunk.
-  * **chunk_type** ([`Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable)[[`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]] | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – The type of the chunks (list, tuple, set, dict…).
+  * **chunk_type** ([`Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable)[[`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[`T`] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, `VT`]] | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – The type of the chunks (list, tuple, set, dict…).
 * **Return type:**
-  [`Iterator`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`), [`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis)] | [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]]
+  [`Iterator`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[`T`] | [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[`T`, [`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis)] | [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[`KT`, `VT`]]
 * **Returns:**
   An iterator of dicts if the input is a Mapping, otherwise an iterator
   of collections (list, tuple, set…).
@@ -2563,37 +2564,37 @@ Return current package name
 Convert iso date string to utc integer timestamp.
 Inverse of utc_int_to_iso_date.
 
-* **Return type:**
-  [`int`](https://docs.python.org/3/builtins/functions.html#int)
-
 ```pycon
 >>> iso_date_to_utc_int('2024-08-12T14:01:57+00:00')
 1723471317
 ```
 
+* **Return type:**
+  [`int`](https://docs.python.org/3/builtins/functions.html#int)
+
 ### oa.util.jsonl_dumps(x, encoding='utf-8')
 
 Serialize an iterable as JSONL bytes
-
-* **Return type:**
-  [`bytes`](https://docs.python.org/3/builtins/stdtypes.html#bytes)
 
 ```pycon
 >>> jsonl_dumps([{'a': 1}, {'b': 2}])
 b'{"a": 1}\n{"b": 2}'
 ```
 
+* **Return type:**
+  [`bytes`](https://docs.python.org/3/builtins/stdtypes.html#bytes)
+
 ### oa.util.jsonl_loads_iter(src, \*, get_lines=<method 'splitlines' of 'bytes' objects>, line_egress=operator.methodcaller('strip'))
 
 Deserialize JSONL bytes into a python iterable (dict or list of dicts)
-
-* **Return type:**
-  [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)]
 
 ```pycon
 >>> list(jsonl_loads(b'\n{"a": 1}\n\n{"b": 2}'))
 [{'a': 1}, {'b': 2}]
 ```
+
+* **Return type:**
+  [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)]
 
 ### oa.util.mk_local_files_saves_callback(rootdir=None, \*, serializer=<built-in function dumps>, index_to_filename=<built-in method format of str object>, print_dir_path=True)
 
@@ -2639,13 +2640,13 @@ decorated function, sourcing them from `parameters`, matching them by name.
 Convert utc integer timestamp to more human readable iso format.
 Inverse of iso_date_to_utc_int.
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> utc_int_to_iso_date(1723471317)
 '2024-08-12T14:01:57+00:00'
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
 
 
 # _autosummary/oa.vector_stores.html.md
@@ -2735,38 +2736,38 @@ Create a search function for an OpenAI vector store using the Responses API.
 
 # About this build
 
-This documentation was built on **2026-10-14 00:42 UTC** from commit <a href="https://github.com/thorwhalen/oa/commit/617693d165626d37fa9fba8df44e332d2758d202"><code>617693d</code></a> on branch <code>main</code>, for **oa 0.1.60** (from <code>pyproject.toml</code>).
+This documentation was built on **2026-11-21 19:22 UTC** from commit <a href="https://github.com/addaix/oa/commit/019e35af20691ba37431ae1a67cbc868b80595ac"><code>019e35a</code></a> on branch <code>main</code>, for **oa 0.1.61** (from <code>pyproject.toml</code>).
 
 #### NOTE
 Nothing suggests a mismatch: the tree was clean at the commit above, and the documented version is the one on PyPI.
 
 ## Source
 
-|                     |                                                                                                                                                      |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Commit              | <a href="https://github.com/thorwhalen/oa/commit/617693d165626d37fa9fba8df44e332d2758d202"><code>617693d165626d37fa9fba8df44e332d2758d202</code></a> |
-| Branch              | <code>main</code>                                                                                                                                    |
-| Tags at this commit | <code>0.1.60</code>                                                                                                                                  |
-| Working tree        | clean                                                                                                                                                |
-| Remote              | <code>https://github.com/thorwhalen/oa</code>                                                                                                        |
+|                     |                                                                                                                                                  |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Commit              | <a href="https://github.com/addaix/oa/commit/019e35af20691ba37431ae1a67cbc868b80595ac"><code>019e35af20691ba37431ae1a67cbc868b80595ac</code></a> |
+| Branch              | <code>main</code>                                                                                                                                |
+| Tags at this commit | <code>0.1.61</code>                                                                                                                              |
+| Working tree        | clean                                                                                                                                            |
+| Remote              | <code>https://github.com/addaix/oa</code>                                                                                                        |
 
 ## Continuous integration
 
 |              |                                                                                            |
 |--------------|--------------------------------------------------------------------------------------------|
-| Repository   | <code>thorwhalen/oa</code>                                                                 |
-| Run          | <a href="https://github.com/thorwhalen/oa/actions/runs/38491424380">38491424380</a>        |
+| Repository   | <code>addaix/oa</code>                                                                     |
+| Run          | <a href="https://github.com/addaix/oa/actions/runs/44940304206">44940304206</a>            |
 | Ref          | <code>refs/heads/main</code>                                                               |
-| Event commit | <code>fe917988b3611965f7158f3eb4540fa9ac394076</code> (in the history of the built commit) |
+| Event commit | <code>2b7110d8f6f504e8e8d2fa70a5b0486d3a88a3d8</code> (in the history of the built commit) |
 
 ## Tools
 
 |          |         |
 |----------|---------|
-| epythet  | 0.2.17  |
-| Sphinx   | 9.1.0   |
+| epythet  | 0.2.23  |
+| Sphinx   | 9.1.1   |
 | docutils | 0.22.4  |
-| Python   | 3.12.15 |
+| Python   | 3.12.16 |
 
 ## Configuration as resolved
 
@@ -2782,14 +2783,14 @@ Nothing suggests a mismatch: the tree was clean at the commit above, and the doc
 
 ## Package on PyPI
 
-Latest release: <a href="https://pypi.org/project/oa/0.1.60/">0.1.60</a>, the same as the documented version.
+Latest release: <a href="https://pypi.org/project/oa/0.1.61/">0.1.61</a>, the same as the documented version.
 
 ## Reproduce
 
 ```bash
-git clone https://github.com/thorwhalen/oa && cd oa
-git checkout 617693d165626d37fa9fba8df44e332d2758d202
-pip install "epythet==0.2.17"
+git clone https://github.com/addaix/oa && cd oa
+git checkout 019e35af20691ba37431ae1a67cbc868b80595ac
+pip install "epythet==0.2.23"
 epythet quickstart . --ignore tests/ scrap/ examples/
 ```
 

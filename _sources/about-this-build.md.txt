@@ -5,7 +5,7 @@ orphan: true
 
 # About this build
 
-This documentation was built on **2026-10-14 00:42 UTC** from commit <a href="https://github.com/thorwhalen/oa/commit/617693d165626d37fa9fba8df44e332d2758d202"><code>617693d</code></a> on branch <code>main</code>, for **oa 0.1.60** (from <code>pyproject.toml</code>).
+This documentation was built on **2026-11-21 19:22 UTC** from commit <a href="https://github.com/addaix/oa/commit/019e35af20691ba37431ae1a67cbc868b80595ac"><code>019e35a</code></a> on branch <code>main</code>, for **oa 0.1.61** (from <code>pyproject.toml</code>).
 
 :::{note}
 Nothing suggests a mismatch: the tree was clean at the commit above, and the documented version is the one on PyPI.
@@ -15,29 +15,29 @@ Nothing suggests a mismatch: the tree was clean at the commit above, and the doc
 
 | | |
 |---|---|
-| Commit | <a href="https://github.com/thorwhalen/oa/commit/617693d165626d37fa9fba8df44e332d2758d202"><code>617693d165626d37fa9fba8df44e332d2758d202</code></a> |
+| Commit | <a href="https://github.com/addaix/oa/commit/019e35af20691ba37431ae1a67cbc868b80595ac"><code>019e35af20691ba37431ae1a67cbc868b80595ac</code></a> |
 | Branch | <code>main</code> |
-| Tags at this commit | <code>0.1.60</code> |
+| Tags at this commit | <code>0.1.61</code> |
 | Working tree | clean |
-| Remote | <code>https://github.com/thorwhalen/oa</code> |
+| Remote | <code>https://github.com/addaix/oa</code> |
 
 ## Continuous integration
 
 | | |
 |---|---|
-| Repository | <code>thorwhalen/oa</code> |
-| Run | <a href="https://github.com/thorwhalen/oa/actions/runs/38491424380">38491424380</a> |
+| Repository | <code>addaix/oa</code> |
+| Run | <a href="https://github.com/addaix/oa/actions/runs/44940304206">44940304206</a> |
 | Ref | <code>refs/heads/main</code> |
-| Event commit | <code>fe917988b3611965f7158f3eb4540fa9ac394076</code> (in the history of the built commit) |
+| Event commit | <code>2b7110d8f6f504e8e8d2fa70a5b0486d3a88a3d8</code> (in the history of the built commit) |
 
 ## Tools
 
 | | |
 |---|---|
-| epythet | 0.2.17 |
-| Sphinx | 9.1.0 |
+| epythet | 0.2.23 |
+| Sphinx | 9.1.1 |
 | docutils | 0.22.4 |
-| Python | 3.12.15 |
+| Python | 3.12.16 |
 
 ## Configuration as resolved
 
@@ -53,14 +53,14 @@ Nothing suggests a mismatch: the tree was clean at the commit above, and the doc
 
 ## Package on PyPI
 
-Latest release: <a href="https://pypi.org/project/oa/0.1.60/">0.1.60</a>, the same as the documented version.
+Latest release: <a href="https://pypi.org/project/oa/0.1.61/">0.1.61</a>, the same as the documented version.
 
 ## Reproduce
 
 ```bash
-git clone https://github.com/thorwhalen/oa && cd oa
-git checkout 617693d165626d37fa9fba8df44e332d2758d202
-pip install "epythet==0.2.17"
+git clone https://github.com/addaix/oa && cd oa
+git checkout 019e35af20691ba37431ae1a67cbc868b80595ac
+pip install "epythet==0.2.23"
 epythet quickstart . --ignore tests/ scrap/ examples/
 ```
 

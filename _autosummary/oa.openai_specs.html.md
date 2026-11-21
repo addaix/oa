@@ -98,15 +98,15 @@ Useful when, for example, you want to make a table containing both keys and valu
 
 Convert prompt to a normalized valid file/folder name
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> normalized_file_name("This is a prompt")
 'this is a prompt'
 >>> normalized_file_name("This is: a PROMPT!  (with punctuation)")
 'this is a prompt with punctuation'
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
 
 ### oa.openai_specs.properties_to_annotation(name, props)
 
@@ -116,7 +116,7 @@ Get annotations from a schema
 
 Get all but kind fields of a Parameter object
 
-### oa.openai_specs.schema_to_docs(name, schema, prefix='', line_prefix='\\\\t')
+### oa.openai_specs.schema_to_docs(name, schema, prefix='', line_prefix='\\t')
 
 Get the docs for a schema
 

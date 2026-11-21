@@ -8,7 +8,7 @@ Base oa functionality
 |--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | `complete`(prompt[, model, best_of, echo, ...])                                                  |                                                                                 |
 | [`compute_price`](#oa.base.compute_price)(model[, num_input_tokens, ...])   | Compute the price of a model given the number of input and output tokens        |
-| `dalle`(prompt[, n, size, background, model, ...])                                               |                                                                                 |
+| `dalle`(prompt[, n, size, background, ...])                                                      |                                                                                 |
 | [`embeddings`](#oa.base.embeddings)([texts, batch_size, egress, ...])    | Get embeddings for a text or texts.                                             |
 | [`list_engine_ids`](#oa.base.list_engine_ids)([pattern])                      | List the available engine IDs.                                                  |
 | [`model_information`](#oa.base.model_information)(model, information)           | Get information about a model                                                   |
@@ -25,7 +25,7 @@ Compute the price of a model given the number of input and output tokens
 Get embeddings for a text or texts.
 
 * **Parameters:**
-  * **texts** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – A string, an iterable of strings, or a dictionary of strings
+  * **texts** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – A string, an iterable of strings, or a dictionary of strings
   * **egress** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str) | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – A function that takes the embeddings and returns the desired output.
     If None, the output will be a list of embeddings. If False, no output will be
     returned, so the batch_callback had better be set to accumulate the results.
@@ -141,7 +141,7 @@ Text is valid if
 - the number of tokens in the text is less than or equal to the max_tokens
 
 * **Parameters:**
-  * **texts** (`Union`[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – a string or an iterable of strings
+  * **texts** ([`Union`](https://docs.python.org/3/library/typing.html#typing.Union)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`str`](https://docs.python.org/3/builtins/stdtypes.html#str)], [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)]]) – a string or an iterable of strings
   * **token_count** – Specification of the token count of the text or texts
   * **model** ([`str`](https://docs.python.org/3/builtins/stdtypes.html#str)) – The model to use for token count
   * **max_tokens** – The maximum number of tokens allowed by the model

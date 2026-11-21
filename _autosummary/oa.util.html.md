@@ -44,7 +44,7 @@ Bases: `ConfigNotFound`
 
 No OpenAI API key is configured, and there is no one to ask for it.
 
-### *class* oa.util.ProcessingManager(pending_items, processing_function, handle_status_function, wait_time_function, status_check_interval=5.0, max_cycles=None, completed_items=<factory>, cycles=0)
+### *class* oa.util.ProcessingManager(pending_items, processing_function, handle_status_function, wait_time_function, status_check_interval=5.0, max_cycles=None, completed_items=dict(), cycles=0)
 
 Bases: [`Generic`](https://docs.python.org/3/library/typing.html#typing.Generic)[`KT`, `VT`, `Result`]
 
@@ -123,11 +123,11 @@ Thought note that you always can control the type of the chunks with the
 `chunk_type` argument.
 
 * **Parameters:**
-  * **iterable** ([`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]) – The iterable or mapping to divide.
+  * **iterable** ([`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[`T`] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, `VT`]) – The iterable or mapping to divide.
   * **chk_size** ([`int`](https://docs.python.org/3/builtins/functions.html#int)) – The size of each chunk.
-  * **chunk_type** ([`Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable)[[`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]] | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – The type of the chunks (list, tuple, set, dict…).
+  * **chunk_type** ([`Callable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable)[[`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis), [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[`T`] | [`Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping)[`KT`, `VT`]] | [`None`](https://docs.python.org/3/builtins/constants.html#None)) – The type of the chunks (list, tuple, set, dict…).
 * **Return type:**
-  [`Iterator`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`)] | [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`T`), [`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis)] | [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[[`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`KT`), [`TypeVar`](https://docs.python.org/3/library/typing.html#typing.TypeVar)(`VT`)]]
+  [`Iterator`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator)[[`list`](https://docs.python.org/3/builtins/stdtypes.html#list)[`T`] | [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)[`T`, [`...`](https://docs.python.org/3/builtins/constants.html#Ellipsis)] | [`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)[`KT`, `VT`]]
 * **Returns:**
   An iterator of dicts if the input is a Mapping, otherwise an iterator
   of collections (list, tuple, set…).
@@ -203,37 +203,37 @@ Return current package name
 Convert iso date string to utc integer timestamp.
 Inverse of utc_int_to_iso_date.
 
-* **Return type:**
-  [`int`](https://docs.python.org/3/builtins/functions.html#int)
-
 ```pycon
 >>> iso_date_to_utc_int('2024-08-12T14:01:57+00:00')
 1723471317
 ```
 
+* **Return type:**
+  [`int`](https://docs.python.org/3/builtins/functions.html#int)
+
 ### oa.util.jsonl_dumps(x, encoding='utf-8')
 
 Serialize an iterable as JSONL bytes
-
-* **Return type:**
-  [`bytes`](https://docs.python.org/3/builtins/stdtypes.html#bytes)
 
 ```pycon
 >>> jsonl_dumps([{'a': 1}, {'b': 2}])
 b'{"a": 1}\n{"b": 2}'
 ```
 
+* **Return type:**
+  [`bytes`](https://docs.python.org/3/builtins/stdtypes.html#bytes)
+
 ### oa.util.jsonl_loads_iter(src, \*, get_lines=<method 'splitlines' of 'bytes' objects>, line_egress=operator.methodcaller('strip'))
 
 Deserialize JSONL bytes into a python iterable (dict or list of dicts)
-
-* **Return type:**
-  [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)]
 
 ```pycon
 >>> list(jsonl_loads(b'\n{"a": 1}\n\n{"b": 2}'))
 [{'a': 1}, {'b': 2}]
 ```
+
+* **Return type:**
+  [`Iterable`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable)[[`dict`](https://docs.python.org/3/builtins/stdtypes.html#dict)]
 
 ### oa.util.mk_local_files_saves_callback(rootdir=None, \*, serializer=<built-in function dumps>, index_to_filename=<built-in method format of str object>, print_dir_path=True)
 
@@ -279,10 +279,10 @@ decorated function, sourcing them from `parameters`, matching them by name.
 Convert utc integer timestamp to more human readable iso format.
 Inverse of iso_date_to_utc_int.
 
-* **Return type:**
-  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
-
 ```pycon
 >>> utc_int_to_iso_date(1723471317)
 '2024-08-12T14:01:57+00:00'
 ```
+
+* **Return type:**
+  [`str`](https://docs.python.org/3/builtins/stdtypes.html#str)
