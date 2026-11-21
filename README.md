@@ -24,8 +24,8 @@ What `oa` does for you is enable you to easily -- really easily -- harness the n
 Below, you'll see how 
 
 See notebooks:
-* [oa - An OpenAI facade.ipynb](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20An%20OpenAI%20facade.ipynb)
-* [oa - Making an Aesop fables children's book oa.ipynb](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20Making%20an%20Aesop%20fables%20children's%20book%20oa.ipynb)
+* [oa - An OpenAI facade.ipynb](https://github.com/addaix/oa/blob/main/misc/oa%20-%20An%20OpenAI%20facade.ipynb)
+* [oa - Making an Aesop fables children's book oa.ipynb](https://github.com/addaix/oa/blob/main/misc/oa%20-%20Making%20an%20Aesop%20fables%20children's%20book%20oa.ipynb)
 
 Below are a few snippets from there. 
 
@@ -404,7 +404,7 @@ from IPython.display import Image
 Image(url=url)
 ```
 
-<img width="608" alt="image" src="https://github.com/thorwhalen/oa/assets/1906276/6e7b2ac4-648c-4ec0-81bf-078208f4ac39">
+<img width="608" alt="image" src="https://github.com/addaix/oa/assets/1906276/6e7b2ac4-648c-4ec0-81bf-078208f4ac39">
 
 
 ## Raw form - When you need to be closer to the metal
@@ -551,7 +551,7 @@ print(resp["choices"][0]["message"]["content"])
 The `ChatDacc` class gives you access of the main functionalities of the `chats.py` module.
 It provides tools for analyzing and extracting data from shared ChatGPT conversations. 
 Here’s an overview of its main features, for more details, see 
-[this demo notebook](https://github.com/thorwhalen/oa/blob/main/misc/oa%20-%20chats%20acquisition%20and%20parsing.ipynb)
+[this demo notebook](https://github.com/addaix/oa/blob/main/misc/oa%20-%20chats%20acquisition%20and%20parsing.ipynb)
 
 
 ## Initialize with a URL
