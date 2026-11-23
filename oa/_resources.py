@@ -112,7 +112,14 @@ from functools import partial
 from typing import Dict, Any, Optional, Union, List
 from collections.abc import Callable
 
-import pandas as pd
+try:
+    import pandas as pd
+    from bs4 import BeautifulSoup, Tag
+except ImportError as e:  # pragma: no cover - depends on the installed extras
+    raise ImportError(
+        "oa._resources (pricing tables) needs pandas and beautifulsoup4: "
+        "install oa with its 'tables' and 'html' extras"
+    ) from e
 import dol
 
 
@@ -257,13 +264,11 @@ class Resources:
 
 
 import re
-from bs4 import BeautifulSoup, Tag
 from typing import Dict, List, Any, Optional, Tuple
 from collections import defaultdict
 
 
 from typing import Dict, List, Optional, Tuple, Any
-from bs4 import BeautifulSoup, Tag
 import re
 
 

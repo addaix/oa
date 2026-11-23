@@ -33,12 +33,8 @@ dependencies = [
     "PyYAML",
     "tiktoken",
     "python-dateutil",
-    "beautifulsoup4",
-    "dill",
     "numpy",
-    "pandas",
     "pydantic",
-    "tabled",
 ]
 
 [project.urls]
@@ -48,7 +44,11 @@ Issues = "https://github.com/addaix/oa/issues"
 Changelog = "https://github.com/addaix/oa/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
-testing = ["playwright"]
+# Rarely used parts of oa, imported lazily; install what you need.
+html = ["beautifulsoup4"]  # chat-HTML parsing (oa.chats), pricing page (oa._resources)
+tables = ["pandas", "tabled"]  # batch embeddings storage, pricing tables, DataFrame views
+all = ["beautifulsoup4", "pandas", "tabled"]
+testing = ["playwright", "beautifulsoup4", "pandas", "tabled"]
 
 [tool.ruff]
 line-length = 88

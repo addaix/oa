@@ -107,7 +107,16 @@ from dol import (
     JsonFiles as _JsonFiles,
     PickleFiles as _PickleFiles,
 )
-from tabled.wrappers import single_column_parquet_encode, single_column_parquet_decode
+try:
+    from tabled.wrappers import (
+        single_column_parquet_encode,
+        single_column_parquet_decode,
+    )
+except ImportError as e:  # pragma: no cover - depends on the installed extras
+    raise ImportError(
+        "oa.batch_embeddings stores embeddings as parquet and needs tabled (and pandas): "
+        "install oa with its 'tables' extra"
+    ) from e
 
 JsonFiles = ensure_clear_to_kv_store(_JsonFiles)
 PickleFiles = ensure_clear_to_kv_store(_PickleFiles)

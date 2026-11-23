@@ -33,8 +33,18 @@ import asyncio
 from typing import Optional, Union, List, Dict, Any
 from collections.abc import Callable, Iterable
 from functools import partial, cached_property
-from bs4 import BeautifulSoup
 from dol import path_filter, Pipe, path_get, paths_getter
+
+
+def _beautifulsoup():
+    """``bs4.BeautifulSoup``, imported on first use (the optional ``html`` extra)."""
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError as e:
+        raise ImportError(
+            "parsing chat HTML needs beautifulsoup4: install oa with its 'html' extra"
+        ) from e
+    return BeautifulSoup
 
 
 # --------------------------------------------------------------------------------------
@@ -147,6 +157,7 @@ def reduce_chat_html(html: str) -> str:
         A stripped-down HTML string containing only the conversation thread.
     """
     # 1. Use BeautifulSoup to quickly find the root of the conversation thread
+    BeautifulSoup = _beautifulsoup()
     soup = BeautifulSoup(html, "html.parser")
 
     # 2. The entire conversation content lives inside the element with id="thread".
@@ -180,6 +191,7 @@ def parse_chat_html(html: str) -> list[dict[str, Any]]:
         A list of dictionaries, where each dictionary represents a message and
         contains 'id', 'role', 'content', and 'message_id' keys.
     """
+    BeautifulSoup = _beautifulsoup()
     soup = BeautifulSoup(html, "html.parser")
     conversation = []
 
